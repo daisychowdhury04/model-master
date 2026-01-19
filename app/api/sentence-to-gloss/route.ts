@@ -1,6 +1,21 @@
 import { NextResponse } from "next/server";
 import { sentenceToGlossHybrid } from "@/lib/gloss";
 
+const MAX_SENTENCE_LENGTH = 5000;
+
+function getSentence(input: unknown): string {
+  if (typeof input !== "string") return "";
+  return input.trim();
+}
+
+function validateSentence(sentence: string): string | null {
+  if (!sentence) return "Sentence is required";
+  if (sentence.length > MAX_SENTENCE_LENGTH) {
+    return `Sentence is too long (max ${MAX_SENTENCE_LENGTH} characters)`;
+  }
+  return null;
+}
+
 export async function POST(request: Request) {
   const key = process.env.OPENAI_API_KEY;
   if (!key?.trim()) {
@@ -11,8 +26,17 @@ export async function POST(request: Request) {
   }
 
   try {
-    const body = await request.json();
-    const sentence = typeof body.sentence === "string" ? body.sentence : "";
+    let body: unknown;
+    try {
+      body = await request.json();
+    } catch {
+      return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
+    }
+    const sentence = getSentence((body as { sentence?: unknown })?.sentence);
+    const validationError = validateSentence(sentence);
+    if (validationError) {
+      return NextResponse.json({ error: validationError }, { status: 400 });
+    }
 
     const gloss = await sentenceToGlossHybrid(sentence, key);
 
@@ -34,7 +58,11 @@ export async function GET(request: Request) {
 
   try {
     const { searchParams } = new URL(request.url);
-    const sentence = searchParams.get("sentence") ?? "";
+    const sentence = getSentence(searchParams.get("sentence"));
+    const validationError = validateSentence(sentence);
+    if (validationError) {
+      return NextResponse.json({ error: validationError }, { status: 400 });
+    }
 
     const gloss = await sentenceToGlossHybrid(sentence, key);
 

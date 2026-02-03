@@ -4,6 +4,7 @@
  */
 
 import OpenAI from "openai";
+import { sanitizeForSignTokens } from "@/lib/textSanitizer";
 
 // ------------------------
 // RULE SETS
@@ -96,11 +97,7 @@ function normalizeVerb(word: string): string {
  * Do not drop tokens here — the model already decided what to keep or omit.
  */
 export function normalizeGlossLine(text: string): string {
-  const words = text
-    .toLowerCase()
-    .split(/\s+/)
-    .map((w) => w.replace(/[.,!?;:]+/g, "").trim())
-    .filter(Boolean);
+  const words = sanitizeForSignTokens(text).toLowerCase().split(/\s+/).filter(Boolean);
 
   return words.map(normalizeVerb).map((w) => w.toUpperCase()).join(" ");
 }
@@ -109,11 +106,7 @@ export function normalizeGlossLine(text: string): string {
  * Rule-based cleanup when there is no AI gloss (fallback / sentenceToGloss).
  */
 export function cleanGloss(text: string): string {
-  const words = text
-    .toLowerCase()
-    .split(/\s+/)
-    .map((w) => w.replace(/[.,!?;:]+/g, "").trim())
-    .filter(Boolean);
+  const words = sanitizeForSignTokens(text).toLowerCase().split(/\s+/).filter(Boolean);
 
   const filtered = words.filter((w) => {
     if (IMPORTANT_WORDS.has(w)) return true;

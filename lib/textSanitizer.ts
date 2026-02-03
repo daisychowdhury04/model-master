@@ -1,7 +1,9 @@
 export function sanitizeForSignTokens(input: string): string {
   if (!input) return "";
   return input
-    .replace(/[^\p{L}\p{N}\s]/gu, " ")
+    .normalize("NFKC")
+    .replace(/[^\p{L}\p{N}\s'-]/gu, " ")
+    .replace(/(^|\s)['-]+(?=\s|$)/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 }

@@ -2,13 +2,21 @@
 export function extractYoutubeVideoId(input: string): string | null {
   const t = input.trim();
   if (!t) return null;
+  if (/^[\w-]{11}$/.test(t)) return t;
   try {
     const u = new URL(t.includes("://") ? t : `https://${t}`);
-    if (u.hostname === "youtu.be") {
+    const host = u.hostname.toLowerCase();
+    const isYoutubeHost =
+      host === "youtube.com" ||
+      host.endsWith(".youtube.com") ||
+      host === "youtube-nocookie.com" ||
+      host.endsWith(".youtube-nocookie.com");
+
+    if (host === "youtu.be") {
       const id = u.pathname.replace(/^\//, "").split(/[/?#]/)[0];
       return id && /^[\w-]{11}$/.test(id) ? id : null;
     }
-    if (u.hostname.endsWith("youtube.com") || u.hostname.endsWith("youtube-nocookie.com")) {
+    if (isYoutubeHost) {
       const v = u.searchParams.get("v");
       if (v && /^[\w-]{11}$/.test(v)) return v;
       const parts = u.pathname.split("/").filter(Boolean);

@@ -67,6 +67,9 @@ function mimeForFilename(filename: string): string {
   if (lower.endsWith(".mp4")) return "audio/mp4";
   if (lower.endsWith(".mp3")) return "audio/mpeg";
   if (lower.endsWith(".wav")) return "audio/wav";
+  if (lower.endsWith(".flac")) return "audio/flac";
+  if (lower.endsWith(".ogg")) return "audio/ogg";
+  if (lower.endsWith(".opus")) return "audio/ogg";
   return "application/octet-stream";
 }
 
@@ -76,6 +79,13 @@ export async function transcribeAudioBytes(
   filename: string,
   apiKey: string
 ): Promise<TranscribeResult> {
+  if (!data?.byteLength) {
+    throw new TranscriptionError("Empty audio payload", 400);
+  }
+  if (!filename?.trim()) {
+    throw new TranscriptionError("Missing audio filename", 400);
+  }
+
   const outbound = new FormData();
   const type = mimeForFilename(filename);
   const blob = new Blob([data], { type });

@@ -1,0 +1,8 @@
+export const N = {
+  NO: [
+    'RIGHT_HAND_TO_DISTANCE_FROM_FACE',
+    'RIGHT_INDEX_OPEN_OTHERS_CLOSE',
+    'RIGHT_MIDDLE_OPEN_OTHERS_CLOSE',
+    'RIGHT_ALL_FINGERS_CLOSE',
+  ],
+} as const;

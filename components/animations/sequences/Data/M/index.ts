@@ -1,0 +1,13 @@
+export const M = {
+  ME: [
+    'RIGHT_HAND_TO_DISTANCE_FROM_FACE',
+    'RIGHT_INDEX_OPEN_OTHERS_CLOSE',
+    'RIGHT_HAND_TO_CHEST',
+  ],
+  MAYBE: [
+    'RIGHT_HAND_TO_CHEST',
+    'LEFT_HAND_TO_CHEST',
+    'RIGHT_PALM_EAST_FACING_BACK',
+    'LEFT_PALM_EAST_FACING_BACK',
+  ],
+} as const;

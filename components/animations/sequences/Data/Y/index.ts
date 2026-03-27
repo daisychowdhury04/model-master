@@ -1,0 +1,12 @@
+export const Y = {
+  YES: [
+    'RIGHT_HAND_TO_CHEST',
+    'RIGHT_ALL_FINGERS_CLOSE',
+    // 'RIGHT_HAND_NEUTRAL',
+  ],
+  YOU: [
+    'RIGHT_HAND_TO_DISTANCE_FROM_FACE',
+    'RIGHT_INDEX_OPEN_OTHERS_CLOSE',
+    'RIGHT_PALM_SOUTH_FACING',
+  ],
+} as const;

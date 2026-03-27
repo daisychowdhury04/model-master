@@ -1,0 +1,596 @@
+{
+  "metadata": {
+    "title": "ASL Sign Language Pose Sequences Reference (v2)",
+    "description": "Corrected pose sequences using RIGHT_HAND_TO_DISTANCE_FROM_FACE and LEFT_HAND_TO_DISTANCE_FROM_FACE as the neutral visible/ready position (elbow bent, hand raised in front of face — the standard signing space). Every word begins by bringing the hand into this visible position before performing the sign.",
+    "total_words": 19,
+    "total_sentences": 18,
+    "key_insight": "DISTANCE_FROM_FACE = hand held up in front of face with elbow bent. This is the base signing position. Signs then move TO forehead, TO chest, or change hand shape FROM this position."
+  },
+
+  "pose_roles": {
+    "RIGHT_HAND_TO_DISTANCE_FROM_FACE": "Neutral ready position — right hand raised, elbow bent, hand visible in front of face. Starting point for most right-hand signs.",
+    "LEFT_HAND_TO_DISTANCE_FROM_FACE": "Neutral ready position — left hand raised, elbow bent, hand visible in front of face. Starting point for most left-hand signs.",
+    "RIGHT_HAND_TO_DISTANCE_FROM_FOREHEAD": "Hand raised slightly above face level, near forehead height — used as approach before forehead contact.",
+    "LEFT_HAND_TO_DISTANCE_FROM_FOREHEAD": "Left hand raised near forehead height — used as approach before left forehead contact.",
+    "RIGHT_HAND_TO_FOREHEAD": "Right hand makes contact with forehead.",
+    "RIGHT_HAND_TO_CHEST": "Right hand makes contact with chest.",
+    "LEFT_HAND_TO_FOREHEAD": "Left hand makes contact with forehead.",
+    "LEFT_HAND_TO_CHEST": "Left hand makes contact with chest."
+  },
+
+  "words": {
+    "YES": {
+      "description": "Fist held up in signing space, nods forward and back twice like a head nodding yes",
+      "steps": [
+        { "step": 1, "action": "Bring right hand to visible signing position — elbow bent, hand in front of face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "step": 2, "action": "Close all fingers into a fist in signing space", "pose": "ALL_FINGERS_CLOSE", "hand": "right" },
+        { "step": 3, "action": "Bend wrist forward then back — repeat twice (nodding fist motion)", "pose": "RIGHT_HAND_NEUTRAL", "hand": "right" }
+      ]
+    },
+    "NO": {
+      "description": "Index and middle finger snap down to thumb twice in signing space",
+      "steps": [
+        { "step": 1, "action": "Bring right hand to visible signing position — elbow bent, hand in front of face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "step": 2, "action": "Extend index finger, others closed", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "step": 3, "action": "Extend middle finger alongside index (two fingers up)", "pose": "MIDDLE_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "step": 4, "action": "Snap both fingers down closed against thumb — repeat twice", "pose": "ALL_FINGERS_CLOSE", "hand": "right" }
+      ]
+    },
+    "HELLO": {
+      "description": "Open palm salute — hand moves from forehead outward into signing space",
+      "steps": [
+        { "step": 1, "action": "Bring right hand to visible signing position — elbow bent, hand in front of face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "step": 2, "action": "Open all fingers flat", "pose": "ALL_FINGERS_OPEN", "hand": "right" },
+        { "step": 3, "action": "Move hand up to forehead — salute contact", "pose": "RIGHT_HAND_TO_FOREHEAD", "hand": "right" },
+        { "step": 4, "action": "Sweep hand outward away from forehead back to visible distance", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" }
+      ]
+    },
+    "THINK": {
+      "description": "Index finger taps the side of the forehead",
+      "steps": [
+        { "step": 1, "action": "Bring right hand to visible signing position — elbow bent, hand in front of face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "step": 2, "action": "Extend index finger only, others closed", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "step": 3, "action": "Move index finger up toward forehead", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FOREHEAD", "hand": "right" },
+        { "step": 4, "action": "Tap index fingertip to side of forehead", "pose": "RIGHT_HAND_TO_FOREHEAD", "hand": "right" }
+      ]
+    },
+    "KNOW": {
+      "description": "Flat open hand taps fingertips to forehead",
+      "steps": [
+        { "step": 1, "action": "Bring right hand to visible signing position — elbow bent, hand in front of face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "step": 2, "action": "Open all fingers flat", "pose": "ALL_FINGERS_OPEN", "hand": "right" },
+        { "step": 3, "action": "Raise hand toward forehead level", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FOREHEAD", "hand": "right" },
+        { "step": 4, "action": "Tap fingertips to forehead", "pose": "RIGHT_HAND_TO_FOREHEAD", "hand": "right" }
+      ]
+    },
+    "FORGET": {
+      "description": "Open hand sweeps across forehead, closing into a fist as it pulls away",
+      "steps": [
+        { "step": 1, "action": "Bring right hand to visible signing position — elbow bent, hand in front of face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "step": 2, "action": "Open all fingers flat", "pose": "ALL_FINGERS_OPEN", "hand": "right" },
+        { "step": 3, "action": "Place open hand against forehead", "pose": "RIGHT_HAND_TO_FOREHEAD", "hand": "right" },
+        { "step": 4, "action": "Sweep hand away from forehead, closing fingers into fist as it pulls back to distance", "pose": "ALL_FINGERS_CLOSE", "hand": "right" },
+        { "step": 5, "action": "Fist held out in visible signing space", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" }
+      ]
+    },
+    "ME": {
+      "description": "Index finger points inward to touch own chest",
+      "steps": [
+        { "step": 1, "action": "Bring right hand to visible signing position — elbow bent, hand in front of face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "step": 2, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "step": 3, "action": "Point finger toward and touch chest", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" }
+      ]
+    },
+    "YOU": {
+      "description": "Index finger extends and points outward toward the other person",
+      "steps": [
+        { "step": 1, "action": "Bring right hand to visible signing position — elbow bent, hand in front of face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "step": 2, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "step": 3, "action": "Turn palm to face east — point outward toward the other person", "pose": "PALM_EAST_FACING", "hand": "right" }
+      ]
+    },
+    "PLEASE": {
+      "description": "Open palm placed on chest, rubbed in a circular motion",
+      "steps": [
+        { "step": 1, "action": "Bring right hand to visible signing position — elbow bent, hand in front of face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "step": 2, "action": "Open all fingers, palm facing inward (west)", "pose": "PALM_WEST_FACING", "hand": "right" },
+        { "step": 3, "action": "Bring open palm down and place flat on chest, rub in circular motion", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" }
+      ]
+    },
+    "SORRY": {
+      "description": "Closed fist rubbed in a circle on the chest",
+      "steps": [
+        { "step": 1, "action": "Bring right hand to visible signing position — elbow bent, hand in front of face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "step": 2, "action": "Close all fingers into a fist", "pose": "ALL_FINGERS_CLOSE", "hand": "right" },
+        { "step": 3, "action": "Bring fist down to chest, rub in circular motion", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" }
+      ]
+    },
+    "THANK YOU": {
+      "description": "Flat hand touches chin/lips then extends outward toward the person",
+      "steps": [
+        { "step": 1, "action": "Bring right hand to visible signing position — elbow bent, hand in front of face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "step": 2, "action": "Open all fingers flat", "pose": "ALL_FINGERS_OPEN", "hand": "right" },
+        { "step": 3, "action": "Touch fingertips to chin / lower face", "pose": "RIGHT_HAND_TO_FOREHEAD", "hand": "right" },
+        { "step": 4, "action": "Extend hand forward outward away from face toward person", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" }
+      ]
+    },
+    "GOOD": {
+      "description": "Flat right hand touches chin, then drops into open left palm",
+      "steps": [
+        { "step": 1, "action": "Bring left hand to visible signing position — elbow bent, hand in front of face", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "step": 2, "action": "Open left hand flat, palm facing up to act as receiving surface", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" },
+        { "step": 3, "action": "Bring right hand to visible signing position — elbow bent, hand in front of face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "step": 4, "action": "Open all fingers flat on right hand", "pose": "ALL_FINGERS_OPEN", "hand": "right" },
+        { "step": 5, "action": "Touch right fingertips to chin / lower face", "pose": "RIGHT_HAND_TO_FOREHEAD", "hand": "right" },
+        { "step": 6, "action": "Drop right hand downward, palm facing down, land onto left palm", "pose": "PALM_SOUTH_FACING", "hand": "right" }
+      ]
+    },
+    "STRONG": {
+      "description": "Right arm flexes into a bicep / muscle pose in signing space",
+      "steps": [
+        { "step": 1, "action": "Bring right hand to visible signing position — elbow bent, hand in front of face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "step": 2, "action": "Flex right arm upward into bicep muscle pose", "pose": "RIGHT_MUSCLE_POSE", "hand": "right" }
+      ]
+    },
+    "STOP": {
+      "description": "Right hand chops sharply down onto open left palm",
+      "steps": [
+        { "step": 1, "action": "Bring left hand to visible signing position — elbow bent, hand in front of face", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "step": 2, "action": "Open left hand, palm facing up (base/surface)", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" },
+        { "step": 3, "action": "Bring right hand to visible signing position — elbow bent, hand in front of face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "step": 4, "action": "Open right hand flat, palm facing east (blade/karate position)", "pose": "PALM_EAST_FACING", "hand": "right" },
+        { "step": 5, "action": "Chop right hand downward onto left palm", "pose": "PALM_SOUTH_FACING", "hand": "right" }
+      ]
+    },
+    "HELP": {
+      "description": "Right thumb-up fist placed on open left palm; both hands lift upward together",
+      "steps": [
+        { "step": 1, "action": "Bring left hand to visible signing position — elbow bent, hand in front of face", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "step": 2, "action": "Open left hand, palm facing up (base surface)", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" },
+        { "step": 3, "action": "Bring right hand to visible signing position — elbow bent, hand in front of face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "step": 4, "action": "Extend right thumb up, close other fingers (thumbs-up shape)", "pose": "THUMB_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "step": 5, "action": "Rest right thumb-fist onto left open palm", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" },
+        { "step": 6, "action": "Lift both hands upward together — palm now facing north", "pose": "PALM_NORTH_FACING", "hand": "right" }
+      ]
+    },
+    "WAIT": {
+      "description": "Both hands open, palms facing up in signing space, fingers flutter slightly",
+      "steps": [
+        { "step": 1, "action": "Bring right hand to visible signing position — elbow bent, hand in front of face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "step": 2, "action": "Bring left hand to visible signing position — elbow bent, hand in front of face", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "step": 3, "action": "Open right hand, palm facing up", "pose": "PALM_NORTH_FACING", "hand": "right" },
+        { "step": 4, "action": "Open left hand, palm facing up — hold both out, fingers flutter", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" }
+      ]
+    },
+    "GIVE": {
+      "description": "Hand starts near chest, opens palm-up, then extends outward toward recipient",
+      "steps": [
+        { "step": 1, "action": "Bring right hand to visible signing position — elbow bent, hand in front of face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "step": 2, "action": "Bring right hand inward toward chest", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" },
+        { "step": 3, "action": "Open hand, palm facing up", "pose": "PALM_NORTH_FACING", "hand": "right" },
+        { "step": 4, "action": "Extend hand outward away from body toward recipient", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" }
+      ]
+    },
+    "RECEIVE": {
+      "description": "Both hands open palms up in signing space, draw inward toward chest",
+      "steps": [
+        { "step": 1, "action": "Bring right hand to visible signing position — elbow bent, hand in front of face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "step": 2, "action": "Bring left hand to visible signing position — elbow bent, hand in front of face", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "step": 3, "action": "Open right hand, palm facing up", "pose": "PALM_NORTH_FACING", "hand": "right" },
+        { "step": 4, "action": "Open left hand, palm facing up", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" },
+        { "step": 5, "action": "Draw both hands inward toward chest", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" }
+      ]
+    },
+    "MAYBE": {
+      "description": "Both hands open palms up in signing space, alternate up and down like a balance scale",
+      "steps": [
+        { "step": 1, "action": "Bring right hand to visible signing position — elbow bent, hand in front of face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "step": 2, "action": "Bring left hand to visible signing position — elbow bent, hand in front of face", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "step": 3, "action": "Open right hand, palm facing up", "pose": "PALM_NORTH_FACING", "hand": "right" },
+        { "step": 4, "action": "Open left hand, palm facing up", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" },
+        { "step": 5, "action": "Tilt right palm to face down while left stays up", "pose": "PALM_SOUTH_FACING", "hand": "right" },
+        { "step": 6, "action": "Alternate — tilt right back up, left tilts down — repeat the scale motion", "pose": "PALM_NORTH_FACING", "hand": "right" }
+      ]
+    }
+  },
+
+  "sentences": [
+    {
+      "id": 1,
+      "english": "Hello! Thank you.",
+      "category": "greeting",
+      "asl_order": ["HELLO", "THANK YOU"],
+      "asl_gloss": "HELLO THANK-YOU",
+      "grammar_note": "Both signs flow naturally one after the other.",
+      "pose_sequence": [
+        { "word": "HELLO", "step": 1, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "HELLO", "step": 2, "action": "Open all fingers flat", "pose": "ALL_FINGERS_OPEN", "hand": "right" },
+        { "word": "HELLO", "step": 3, "action": "Move hand up to forehead — salute contact", "pose": "RIGHT_HAND_TO_FOREHEAD", "hand": "right" },
+        { "word": "HELLO", "step": 4, "action": "Sweep hand outward away from forehead", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "THANK YOU", "step": 1, "action": "Open all fingers flat", "pose": "ALL_FINGERS_OPEN", "hand": "right" },
+        { "word": "THANK YOU", "step": 2, "action": "Touch fingertips to chin / lower face", "pose": "RIGHT_HAND_TO_FOREHEAD", "hand": "right" },
+        { "word": "THANK YOU", "step": 3, "action": "Extend hand forward outward away from face toward person", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" }
+      ]
+    },
+    {
+      "id": 2,
+      "english": "Hello! I am strong.",
+      "category": "greeting",
+      "asl_order": ["HELLO", "ME", "STRONG"],
+      "asl_gloss": "HELLO ME STRONG",
+      "grammar_note": "ME establishes subject; STRONG is the comment (topic-comment structure).",
+      "pose_sequence": [
+        { "word": "HELLO", "step": 1, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "HELLO", "step": 2, "action": "Open all fingers flat", "pose": "ALL_FINGERS_OPEN", "hand": "right" },
+        { "word": "HELLO", "step": 3, "action": "Move hand up to forehead — salute contact", "pose": "RIGHT_HAND_TO_FOREHEAD", "hand": "right" },
+        { "word": "HELLO", "step": 4, "action": "Sweep hand outward away from forehead", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "ME", "step": 1, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "ME", "step": 2, "action": "Point finger toward and touch chest", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" },
+        { "word": "STRONG", "step": 1, "action": "Bring right hand back to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "STRONG", "step": 2, "action": "Flex right arm upward into bicep muscle pose", "pose": "RIGHT_MUSCLE_POSE", "hand": "right" }
+      ]
+    },
+    {
+      "id": 3,
+      "english": "Please help me.",
+      "category": "request",
+      "asl_order": ["PLEASE", "HELP", "ME"],
+      "asl_gloss": "PLEASE HELP ME",
+      "grammar_note": "PLEASE at start adds politeness; ME at the end is the object of HELP.",
+      "pose_sequence": [
+        { "word": "PLEASE", "step": 1, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "PLEASE", "step": 2, "action": "Open all fingers, palm facing inward (west)", "pose": "PALM_WEST_FACING", "hand": "right" },
+        { "word": "PLEASE", "step": 3, "action": "Bring open palm down to chest, rub in circular motion", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" },
+        { "word": "HELP", "step": 1, "action": "Bring left hand to visible signing position", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "word": "HELP", "step": 2, "action": "Open left hand, palm facing up (base surface)", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" },
+        { "word": "HELP", "step": 3, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "HELP", "step": 4, "action": "Extend right thumb up, close other fingers", "pose": "THUMB_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "HELP", "step": 5, "action": "Rest right thumb-fist on left palm, lift both upward", "pose": "PALM_NORTH_FACING", "hand": "right" },
+        { "word": "ME", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "ME", "step": 2, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "ME", "step": 3, "action": "Point finger toward and touch chest", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" }
+      ]
+    },
+    {
+      "id": 4,
+      "english": "Please wait.",
+      "category": "request",
+      "asl_order": ["PLEASE", "WAIT"],
+      "asl_gloss": "PLEASE WAIT",
+      "grammar_note": "Short, direct polite request.",
+      "pose_sequence": [
+        { "word": "PLEASE", "step": 1, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "PLEASE", "step": 2, "action": "Open all fingers, palm facing inward (west)", "pose": "PALM_WEST_FACING", "hand": "right" },
+        { "word": "PLEASE", "step": 3, "action": "Bring open palm down to chest, rub in circular motion", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" },
+        { "word": "WAIT", "step": 1, "action": "Bring right hand back to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "WAIT", "step": 2, "action": "Bring left hand to visible signing position", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "word": "WAIT", "step": 3, "action": "Open right hand, palm facing up", "pose": "PALM_NORTH_FACING", "hand": "right" },
+        { "word": "WAIT", "step": 4, "action": "Open left hand, palm facing up — hold both out, fingers flutter", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" }
+      ]
+    },
+    {
+      "id": 5,
+      "english": "Please stop.",
+      "category": "request",
+      "asl_order": ["PLEASE", "STOP"],
+      "asl_gloss": "PLEASE STOP",
+      "grammar_note": "Polite but firm. STOP is a clear two-hand sign.",
+      "pose_sequence": [
+        { "word": "PLEASE", "step": 1, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "PLEASE", "step": 2, "action": "Open all fingers, palm facing inward (west)", "pose": "PALM_WEST_FACING", "hand": "right" },
+        { "word": "PLEASE", "step": 3, "action": "Bring open palm down to chest, rub in circular motion", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" },
+        { "word": "STOP", "step": 1, "action": "Bring left hand to visible signing position", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "word": "STOP", "step": 2, "action": "Open left hand, palm facing up (base surface)", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" },
+        { "word": "STOP", "step": 3, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "STOP", "step": 4, "action": "Open right hand flat, palm facing east (blade position)", "pose": "PALM_EAST_FACING", "hand": "right" },
+        { "word": "STOP", "step": 5, "action": "Chop right hand downward onto left palm", "pose": "PALM_SOUTH_FACING", "hand": "right" }
+      ]
+    },
+    {
+      "id": 6,
+      "english": "Please give me.",
+      "category": "request",
+      "asl_order": ["PLEASE", "GIVE", "ME"],
+      "asl_gloss": "PLEASE GIVE ME",
+      "grammar_note": "GIVE directionally moves from chest outward toward the recipient.",
+      "pose_sequence": [
+        { "word": "PLEASE", "step": 1, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "PLEASE", "step": 2, "action": "Open all fingers, palm facing inward (west)", "pose": "PALM_WEST_FACING", "hand": "right" },
+        { "word": "PLEASE", "step": 3, "action": "Bring open palm down to chest, rub in circular motion", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" },
+        { "word": "GIVE", "step": 1, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "GIVE", "step": 2, "action": "Bring right hand inward toward chest, open", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" },
+        { "word": "GIVE", "step": 3, "action": "Open hand palm facing up", "pose": "PALM_NORTH_FACING", "hand": "right" },
+        { "word": "GIVE", "step": 4, "action": "Extend hand outward toward recipient", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "ME", "step": 1, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "ME", "step": 2, "action": "Point finger toward and touch chest", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" }
+      ]
+    },
+    {
+      "id": 7,
+      "english": "I am sorry.",
+      "category": "emotion",
+      "asl_order": ["ME", "SORRY"],
+      "asl_gloss": "ME SORRY",
+      "grammar_note": "ME establishes subject; SORRY on chest conveys the apology.",
+      "pose_sequence": [
+        { "word": "ME", "step": 1, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "ME", "step": 2, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "ME", "step": 3, "action": "Point finger toward and touch chest", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" },
+        { "word": "SORRY", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "SORRY", "step": 2, "action": "Close all fingers into a fist", "pose": "ALL_FINGERS_CLOSE", "hand": "right" },
+        { "word": "SORRY", "step": 3, "action": "Bring fist down to chest, rub in circular motion", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" }
+      ]
+    },
+    {
+      "id": 8,
+      "english": "I am sorry. You are good.",
+      "category": "emotion",
+      "asl_order": ["ME", "SORRY", "YOU", "GOOD"],
+      "asl_gloss": "ME SORRY YOU GOOD",
+      "grammar_note": "Two-part sentence. YOU shifts reference; GOOD completes the compliment.",
+      "pose_sequence": [
+        { "word": "ME", "step": 1, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "ME", "step": 2, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "ME", "step": 3, "action": "Point finger toward and touch chest", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" },
+        { "word": "SORRY", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "SORRY", "step": 2, "action": "Close all fingers into a fist", "pose": "ALL_FINGERS_CLOSE", "hand": "right" },
+        { "word": "SORRY", "step": 3, "action": "Bring fist down to chest, rub in circular motion", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" },
+        { "word": "YOU", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "YOU", "step": 2, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "YOU", "step": 3, "action": "Turn palm to face east — point outward toward person", "pose": "PALM_EAST_FACING", "hand": "right" },
+        { "word": "GOOD", "step": 1, "action": "Bring left hand to visible signing position", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "word": "GOOD", "step": 2, "action": "Open left hand, palm facing up", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" },
+        { "word": "GOOD", "step": 3, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "GOOD", "step": 4, "action": "Open all fingers flat on right hand", "pose": "ALL_FINGERS_OPEN", "hand": "right" },
+        { "word": "GOOD", "step": 5, "action": "Touch right fingertips to chin / lower face", "pose": "RIGHT_HAND_TO_FOREHEAD", "hand": "right" },
+        { "word": "GOOD", "step": 6, "action": "Drop right hand downward, palm facing down, land onto left palm", "pose": "PALM_SOUTH_FACING", "hand": "right" }
+      ]
+    },
+    {
+      "id": 9,
+      "english": "I think you are good.",
+      "category": "mental",
+      "asl_order": ["ME", "THINK", "YOU", "GOOD"],
+      "asl_gloss": "ME THINK YOU GOOD",
+      "grammar_note": "ASL opinion structure: subject → THINK → topic → comment.",
+      "pose_sequence": [
+        { "word": "ME", "step": 1, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "ME", "step": 2, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "ME", "step": 3, "action": "Point finger toward and touch chest", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" },
+        { "word": "THINK", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "THINK", "step": 2, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "THINK", "step": 3, "action": "Raise index finger toward forehead level", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FOREHEAD", "hand": "right" },
+        { "word": "THINK", "step": 4, "action": "Tap index fingertip to side of forehead", "pose": "RIGHT_HAND_TO_FOREHEAD", "hand": "right" },
+        { "word": "YOU", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "YOU", "step": 2, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "YOU", "step": 3, "action": "Turn palm to face east — point outward toward person", "pose": "PALM_EAST_FACING", "hand": "right" },
+        { "word": "GOOD", "step": 1, "action": "Bring left hand to visible signing position", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "word": "GOOD", "step": 2, "action": "Open left hand, palm facing up", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" },
+        { "word": "GOOD", "step": 3, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "GOOD", "step": 4, "action": "Open all fingers flat on right hand", "pose": "ALL_FINGERS_OPEN", "hand": "right" },
+        { "word": "GOOD", "step": 5, "action": "Touch right fingertips to chin / lower face", "pose": "RIGHT_HAND_TO_FOREHEAD", "hand": "right" },
+        { "word": "GOOD", "step": 6, "action": "Drop right hand downward, palm facing down, land onto left palm", "pose": "PALM_SOUTH_FACING", "hand": "right" }
+      ]
+    },
+    {
+      "id": 10,
+      "english": "I know. Maybe stop.",
+      "category": "mental",
+      "asl_order": ["ME", "KNOW", "MAYBE", "STOP"],
+      "asl_gloss": "ME KNOW MAYBE STOP",
+      "grammar_note": "MAYBE softens the suggestion. Natural in advice or negotiation context.",
+      "pose_sequence": [
+        { "word": "ME", "step": 1, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "ME", "step": 2, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "ME", "step": 3, "action": "Point finger toward and touch chest", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" },
+        { "word": "KNOW", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "KNOW", "step": 2, "action": "Open all fingers flat", "pose": "ALL_FINGERS_OPEN", "hand": "right" },
+        { "word": "KNOW", "step": 3, "action": "Raise hand toward forehead level", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FOREHEAD", "hand": "right" },
+        { "word": "KNOW", "step": 4, "action": "Tap fingertips to forehead", "pose": "RIGHT_HAND_TO_FOREHEAD", "hand": "right" },
+        { "word": "MAYBE", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "MAYBE", "step": 2, "action": "Bring left hand to visible signing position", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "word": "MAYBE", "step": 3, "action": "Open right hand, palm facing up", "pose": "PALM_NORTH_FACING", "hand": "right" },
+        { "word": "MAYBE", "step": 4, "action": "Open left hand, palm facing up", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" },
+        { "word": "MAYBE", "step": 5, "action": "Tilt right palm down while left stays up — alternate, repeat", "pose": "PALM_SOUTH_FACING", "hand": "right" },
+        { "word": "STOP", "step": 1, "action": "Return left hand to visible signing position", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "word": "STOP", "step": 2, "action": "Open left hand, palm facing up (base surface)", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" },
+        { "word": "STOP", "step": 3, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "STOP", "step": 4, "action": "Open right hand, palm facing east (blade position)", "pose": "PALM_EAST_FACING", "hand": "right" },
+        { "word": "STOP", "step": 5, "action": "Chop right hand downward onto left palm", "pose": "PALM_SOUTH_FACING", "hand": "right" }
+      ]
+    },
+    {
+      "id": 11,
+      "english": "I forget. Sorry.",
+      "category": "mental",
+      "asl_order": ["ME", "FORGET", "SORRY"],
+      "asl_gloss": "ME FORGET SORRY",
+      "grammar_note": "Common social phrase. Smooth flow from head to chest.",
+      "pose_sequence": [
+        { "word": "ME", "step": 1, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "ME", "step": 2, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "ME", "step": 3, "action": "Point finger toward and touch chest", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" },
+        { "word": "FORGET", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "FORGET", "step": 2, "action": "Open all fingers flat", "pose": "ALL_FINGERS_OPEN", "hand": "right" },
+        { "word": "FORGET", "step": 3, "action": "Place open hand against forehead", "pose": "RIGHT_HAND_TO_FOREHEAD", "hand": "right" },
+        { "word": "FORGET", "step": 4, "action": "Sweep hand away from forehead, closing fingers into fist", "pose": "ALL_FINGERS_CLOSE", "hand": "right" },
+        { "word": "FORGET", "step": 5, "action": "Fist held out in visible signing space", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "SORRY", "step": 1, "action": "Close all fingers into a fist (already closed from FORGET)", "pose": "ALL_FINGERS_CLOSE", "hand": "right" },
+        { "word": "SORRY", "step": 2, "action": "Bring fist down to chest, rub in circular motion", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" }
+      ]
+    },
+    {
+      "id": 12,
+      "english": "Help me, please. Thank you.",
+      "category": "action",
+      "asl_order": ["HELP", "ME", "PLEASE", "THANK YOU"],
+      "asl_gloss": "HELP ME PLEASE THANK-YOU",
+      "grammar_note": "Full polite request with gratitude.",
+      "pose_sequence": [
+        { "word": "HELP", "step": 1, "action": "Bring left hand to visible signing position", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "word": "HELP", "step": 2, "action": "Open left hand, palm facing up (base surface)", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" },
+        { "word": "HELP", "step": 3, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "HELP", "step": 4, "action": "Extend right thumb up, close other fingers", "pose": "THUMB_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "HELP", "step": 5, "action": "Rest right thumb-fist on left palm, lift both upward", "pose": "PALM_NORTH_FACING", "hand": "right" },
+        { "word": "ME", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "ME", "step": 2, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "ME", "step": 3, "action": "Point finger toward and touch chest", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" },
+        { "word": "PLEASE", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "PLEASE", "step": 2, "action": "Open all fingers, palm facing inward (west)", "pose": "PALM_WEST_FACING", "hand": "right" },
+        { "word": "PLEASE", "step": 3, "action": "Bring open palm down to chest, rub in circular motion", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" },
+        { "word": "THANK YOU", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "THANK YOU", "step": 2, "action": "Open all fingers flat", "pose": "ALL_FINGERS_OPEN", "hand": "right" },
+        { "word": "THANK YOU", "step": 3, "action": "Touch fingertips to chin / lower face", "pose": "RIGHT_HAND_TO_FOREHEAD", "hand": "right" },
+        { "word": "THANK YOU", "step": 4, "action": "Extend hand forward outward away from face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" }
+      ]
+    },
+    {
+      "id": 13,
+      "english": "Stop. Wait. Thank you.",
+      "category": "action",
+      "asl_order": ["STOP", "WAIT", "THANK YOU"],
+      "asl_gloss": "STOP WAIT THANK-YOU",
+      "grammar_note": "Directional instruction followed by gratitude.",
+      "pose_sequence": [
+        { "word": "STOP", "step": 1, "action": "Bring left hand to visible signing position", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "word": "STOP", "step": 2, "action": "Open left hand, palm facing up (base surface)", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" },
+        { "word": "STOP", "step": 3, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "STOP", "step": 4, "action": "Open right hand, palm facing east (blade position)", "pose": "PALM_EAST_FACING", "hand": "right" },
+        { "word": "STOP", "step": 5, "action": "Chop right hand downward onto left palm", "pose": "PALM_SOUTH_FACING", "hand": "right" },
+        { "word": "WAIT", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "WAIT", "step": 2, "action": "Left hand stays at visible signing position", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "word": "WAIT", "step": 3, "action": "Open right hand, palm facing up", "pose": "PALM_NORTH_FACING", "hand": "right" },
+        { "word": "WAIT", "step": 4, "action": "Open left hand, palm facing up — hold both out, fingers flutter", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" },
+        { "word": "THANK YOU", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "THANK YOU", "step": 2, "action": "Open all fingers flat", "pose": "ALL_FINGERS_OPEN", "hand": "right" },
+        { "word": "THANK YOU", "step": 3, "action": "Touch fingertips to chin / lower face", "pose": "RIGHT_HAND_TO_FOREHEAD", "hand": "right" },
+        { "word": "THANK YOU", "step": 4, "action": "Extend hand forward outward away from face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" }
+      ]
+    },
+    {
+      "id": 14,
+      "english": "You give, I receive.",
+      "category": "action",
+      "asl_order": ["YOU", "GIVE", "ME", "RECEIVE"],
+      "asl_gloss": "YOU GIVE ME RECEIVE",
+      "grammar_note": "Describes an exchange. YOU and ME establish the two parties clearly.",
+      "pose_sequence": [
+        { "word": "YOU", "step": 1, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "YOU", "step": 2, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "YOU", "step": 3, "action": "Turn palm to face east — point outward toward person", "pose": "PALM_EAST_FACING", "hand": "right" },
+        { "word": "GIVE", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "GIVE", "step": 2, "action": "Bring right hand inward toward chest, open", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" },
+        { "word": "GIVE", "step": 3, "action": "Open hand, palm facing up", "pose": "PALM_NORTH_FACING", "hand": "right" },
+        { "word": "GIVE", "step": 4, "action": "Extend hand outward toward recipient", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "ME", "step": 1, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "ME", "step": 2, "action": "Point finger toward and touch chest", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" },
+        { "word": "RECEIVE", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "RECEIVE", "step": 2, "action": "Bring left hand to visible signing position", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "word": "RECEIVE", "step": 3, "action": "Open right hand, palm facing up", "pose": "PALM_NORTH_FACING", "hand": "right" },
+        { "word": "RECEIVE", "step": 4, "action": "Open left hand, palm facing up", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" },
+        { "word": "RECEIVE", "step": 5, "action": "Draw both hands inward toward chest", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" }
+      ]
+    },
+    {
+      "id": 15,
+      "english": "You are good. Yes!",
+      "category": "positive",
+      "asl_order": ["YOU", "GOOD", "YES"],
+      "asl_gloss": "YOU GOOD YES",
+      "grammar_note": "Simple affirmation. YES at the end emphasizes enthusiasm.",
+      "pose_sequence": [
+        { "word": "YOU", "step": 1, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "YOU", "step": 2, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "YOU", "step": 3, "action": "Turn palm to face east — point outward toward person", "pose": "PALM_EAST_FACING", "hand": "right" },
+        { "word": "GOOD", "step": 1, "action": "Bring left hand to visible signing position", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "word": "GOOD", "step": 2, "action": "Open left hand, palm facing up", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" },
+        { "word": "GOOD", "step": 3, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "GOOD", "step": 4, "action": "Open all fingers flat on right hand", "pose": "ALL_FINGERS_OPEN", "hand": "right" },
+        { "word": "GOOD", "step": 5, "action": "Touch right fingertips to chin / lower face", "pose": "RIGHT_HAND_TO_FOREHEAD", "hand": "right" },
+        { "word": "GOOD", "step": 6, "action": "Drop right hand downward, palm facing down, land onto left palm", "pose": "PALM_SOUTH_FACING", "hand": "right" },
+        { "word": "YES", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "YES", "step": 2, "action": "Close all fingers into a fist", "pose": "ALL_FINGERS_CLOSE", "hand": "right" },
+        { "word": "YES", "step": 3, "action": "Bend wrist forward then back — repeat twice (nodding fist)", "pose": "RIGHT_HAND_NEUTRAL", "hand": "right" }
+      ]
+    },
+    {
+      "id": 16,
+      "english": "You are strong. I know.",
+      "category": "positive",
+      "asl_order": ["YOU", "STRONG", "ME", "KNOW"],
+      "asl_gloss": "YOU STRONG ME KNOW",
+      "grammar_note": "Compliment followed by acknowledgment.",
+      "pose_sequence": [
+        { "word": "YOU", "step": 1, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "YOU", "step": 2, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "YOU", "step": 3, "action": "Turn palm to face east — point outward toward person", "pose": "PALM_EAST_FACING", "hand": "right" },
+        { "word": "STRONG", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "STRONG", "step": 2, "action": "Flex right arm upward into bicep muscle pose", "pose": "RIGHT_MUSCLE_POSE", "hand": "right" },
+        { "word": "ME", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "ME", "step": 2, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "ME", "step": 3, "action": "Point finger toward and touch chest", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" },
+        { "word": "KNOW", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "KNOW", "step": 2, "action": "Open all fingers flat", "pose": "ALL_FINGERS_OPEN", "hand": "right" },
+        { "word": "KNOW", "step": 3, "action": "Raise hand toward forehead level", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FOREHEAD", "hand": "right" },
+        { "word": "KNOW", "step": 4, "action": "Tap fingertips to forehead", "pose": "RIGHT_HAND_TO_FOREHEAD", "hand": "right" }
+      ]
+    },
+    {
+      "id": 17,
+      "english": "Thank you. You are good.",
+      "category": "positive",
+      "asl_order": ["THANK YOU", "YOU", "GOOD"],
+      "asl_gloss": "THANK-YOU YOU GOOD",
+      "grammar_note": "Grateful compliment. Natural closing to a conversation.",
+      "pose_sequence": [
+        { "word": "THANK YOU", "step": 1, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "THANK YOU", "step": 2, "action": "Open all fingers flat", "pose": "ALL_FINGERS_OPEN", "hand": "right" },
+        { "word": "THANK YOU", "step": 3, "action": "Touch fingertips to chin / lower face", "pose": "RIGHT_HAND_TO_FOREHEAD", "hand": "right" },
+        { "word": "THANK YOU", "step": 4, "action": "Extend hand forward outward away from face", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "YOU", "step": 1, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "YOU", "step": 2, "action": "Turn palm to face east — point outward toward person", "pose": "PALM_EAST_FACING", "hand": "right" },
+        { "word": "GOOD", "step": 1, "action": "Bring left hand to visible signing position", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "word": "GOOD", "step": 2, "action": "Open left hand, palm facing up", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" },
+        { "word": "GOOD", "step": 3, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "GOOD", "step": 4, "action": "Open all fingers flat on right hand", "pose": "ALL_FINGERS_OPEN", "hand": "right" },
+        { "word": "GOOD", "step": 5, "action": "Touch right fingertips to chin / lower face", "pose": "RIGHT_HAND_TO_FOREHEAD", "hand": "right" },
+        { "word": "GOOD", "step": 6, "action": "Drop right hand downward, palm facing down, land onto left palm", "pose": "PALM_SOUTH_FACING", "hand": "right" }
+      ]
+    },
+    {
+      "id": 18,
+      "english": "Maybe you give. Maybe I receive.",
+      "category": "mixed",
+      "asl_order": ["MAYBE", "YOU", "GIVE", "MAYBE", "ME", "RECEIVE"],
+      "asl_gloss": "MAYBE YOU GIVE MAYBE ME RECEIVE",
+      "grammar_note": "Negotiation phrasing. MAYBE repeated signals uncertainty on both sides.",
+      "pose_sequence": [
+        { "word": "MAYBE", "step": 1, "action": "Bring right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "MAYBE", "step": 2, "action": "Bring left hand to visible signing position", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "word": "MAYBE", "step": 3, "action": "Open right hand, palm facing up", "pose": "PALM_NORTH_FACING", "hand": "right" },
+        { "word": "MAYBE", "step": 4, "action": "Open left hand, palm facing up", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" },
+        { "word": "MAYBE", "step": 5, "action": "Tilt right palm down while left stays up — alternate, repeat", "pose": "PALM_SOUTH_FACING", "hand": "right" },
+        { "word": "YOU", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "YOU", "step": 2, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "YOU", "step": 3, "action": "Turn palm to face east — point outward toward person", "pose": "PALM_EAST_FACING", "hand": "right" },
+        { "word": "GIVE", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "GIVE", "step": 2, "action": "Bring right hand inward toward chest, open", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" },
+        { "word": "GIVE", "step": 3, "action": "Open hand, palm facing up", "pose": "PALM_NORTH_FACING", "hand": "right" },
+        { "word": "GIVE", "step": 4, "action": "Extend hand outward toward recipient", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "MAYBE", "step": 1, "action": "Both hands at visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "MAYBE", "step": 2, "action": "Left hand at visible signing position", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "word": "MAYBE", "step": 3, "action": "Open right hand, palm facing up", "pose": "PALM_NORTH_FACING", "hand": "right" },
+        { "word": "MAYBE", "step": 4, "action": "Open left hand, palm facing up", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" },
+        { "word": "MAYBE", "step": 5, "action": "Tilt right palm down while left stays up — alternate, repeat", "pose": "PALM_SOUTH_FACING", "hand": "right" },
+        { "word": "ME", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "ME", "step": 2, "action": "Extend index finger only", "pose": "INDEX_OPEN_OTHERS_CLOSE", "hand": "right" },
+        { "word": "ME", "step": 3, "action": "Point finger toward and touch chest", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" },
+        { "word": "RECEIVE", "step": 1, "action": "Return right hand to visible signing position", "pose": "RIGHT_HAND_TO_DISTANCE_FROM_FACE", "hand": "right" },
+        { "word": "RECEIVE", "step": 2, "action": "Left hand at visible signing position", "pose": "LEFT_HAND_TO_DISTANCE_FROM_FACE", "hand": "left" },
+        { "word": "RECEIVE", "step": 3, "action": "Open right hand, palm facing up", "pose": "PALM_NORTH_FACING", "hand": "right" },
+        { "word": "RECEIVE", "step": 4, "action": "Open left hand, palm facing up", "pose": "LEFT_PALM_NORTH_FACING", "hand": "left" },
+        { "word": "RECEIVE", "step": 5, "action": "Draw both hands inward toward chest", "pose": "RIGHT_HAND_TO_CHEST", "hand": "right" }
+      ]
+    }
+  ]
+}

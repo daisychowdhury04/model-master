@@ -1,0 +1,9 @@
+export const R = {
+  RECEIVE: [
+    'RIGHT_HAND_TO_DISTANCE_FROM_FACE',
+    'LEFT_HAND_TO_DISTANCE_FROM_FACE',
+    'RIGHT_PALM_NORTH_FACING',
+    'LEFT_PALM_NORTH_FACING',
+    'RIGHT_HAND_TO_CHEST',
+  ],
+} as const;
